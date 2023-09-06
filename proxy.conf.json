@@ -1,0 +1,6 @@
+{
+    "/hwn": {
+      "target": "http://www.endemikdb.site/", 
+      "secure": false 
+    }
+  }
