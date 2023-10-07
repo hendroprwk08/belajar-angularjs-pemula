@@ -47,11 +47,14 @@ export class AppComponent {
     this.global_loading = true;
     let post_url = 'https://www.endemikdb.site/hwn?nama=' + postData.nama;
 
+    console.log(postData);
     console.log(post_url);
 
     const httpHeaders = new HttpHeaders()
       // .append('content-type', 'application/json')
-      .append('Access-Control-Allow-Origin', '*');
+      .append('Access-Control-Allow-Origin', '*')
+      .append("Access-Control-Allow-Methods", "DELETE, POST, GET, OPTIONS")
+      .append("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Requested-With");
 
     this.http.post(post_url, null, { 'headers': httpHeaders })
       .subscribe({
